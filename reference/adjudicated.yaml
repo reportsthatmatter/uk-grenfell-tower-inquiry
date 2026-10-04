@@ -1,0 +1,215 @@
+report: uk-grenfell-tower-inquiry
+adjudicated: 2026-10-04
+by: "Claude (Opus 5.5), reading the rendered page images"
+method: "Held-out reference (tagged-PDF blocks, reference/blocks.jsonl): 30 page breaks drawn by `pnpm score --adjudicate-draft` (25 random, 5 where our text and the reference disagree; seeded). Each was decided from the rendered page images (the foot of the old page, from half-way down, stacked over the top 42% of the new one, 85 dpi, two breaks to an image), not from the text layer and before looking at either side's label. Question: does a new block (numbered paragraph, heading, figure, list item, contents entry) start between the two printed body lines, or does the block run on. An unnumbered flush paragraph opening a page under a numbered paragraph is a continuation; the one doubtful case (p.102) was settled by the Inquiry's HTML edition. prev and next are the dataset's lines (notes skipped). Adjudicated after the f951/7150 fixes of ingest#68 (numberedOpenings, figureFaces, per-page geometry)."
+breaks:
+  - page: 4
+    prev: "HC 19–I"
+    next: "This report contains content which some may find distressing"
+    verdict: split
+    stratum: disagreement
+    image: true
+    note: "cover page then the content warning: new block"
+  - page: 7
+    prev: " .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 265"
+    next: "Chapter 64:  The contribution of Rydon   .  .  .  .  .  .  ."
+    verdict: split
+    stratum: disagreement
+    image: true
+    note: "contents: a new chapter entry heads the page"
+  - page: 22
+    prev: " but that is what it had succeeded in doing for many years.7"
+    next: "2.33 In marketing K15 Kingspan relied on the results of a si"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 23
+    prev: "endent nor rigorous and were not always rigorously applied. "
+    next: "2.42 The dishonest strategies of Arconic and Kingspan succee"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 31
+    prev: "provided a completed fire safety strategy. He knew that ACM "
+    next: "was to be used as the rainscreen but paid little or no atten"
+    verdict: join
+    stratum: random
+    image: true
+    note: "2.86 runs on: \"He knew that ACM\" / \"was to be used as the rainscreen\" (f951 page)"
+  - page: 32
+    prev: "fire safety, including the work of the fire engineer."
+    next: "Part 7 "
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 50
+    prev: "ds for regulations written in plain English with the use of "
+    next: "diagrams to convey information more quickly.59 There were al"
+    verdict: join
+    stratum: random
+    image: true
+    note: "4.18 runs on mid-sentence (\"with the use of\" / \"diagrams\")"
+  - page: 63
+    prev: "eas: (i) an homogeneous material of limited combustibility, "
+    next: "(ii) a composite product composed throughout of different ma"
+    verdict: join
+    stratum: disagreement
+    image: true
+    note: "5.23 runs on: its list of \"(i)... (ii)... (iii)\" is one sentence of the paragraph"
+  - page: 67
+    prev: "ning three values to arrive at an overall average figure.199"
+    next: "5.35 The standard also identifies a range of information whi"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 68
+    prev: "o’s report on the adequacy of the current testing regime:208"
+    next: "Figure 5.5: Picture of sample about to undergo ISO 11925-2 t"
+    verdict: split
+    stratum: random
+    image: true
+    note: "the page opens on Figure 5.5 (a photograph) after 5.38 introduces it; a new block"
+  - page: 73
+    prev: "g the location of the different thermocouples appears below."
+    next: "Figure 5.8: Diagram and picture showing the location of  the"
+    verdict: split
+    stratum: random
+    image: true
+    note: "the page opens on Figure 5.8 after a paragraph that ends introducing it; a new block"
+  - page: 75
+    prev: "overall risk assessment when specifying the system.242"
+    next: "5.58 The third edition of BR 135 made it clear that, in orde"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 91
+    prev: "t essential.306 That remained the advice at the time of the "
+    next: "fire and could fairly be described as “departmental”,307 giv"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 94
+    prev: "report on the fire at Knowsley Heights."
+    next: "1994: Dr Raymond Connolly’s ten large-scale tests"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 96
+    prev: " published in 1998.371 It built on the work Dr Connolly had "
+    next: "done in 1994372 and adopted the theoretical basis of his exp"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 98
+    prev: "e years until September 2008, when he joined the department "
+    next: "full-time as the Principal Construction Professional in the "
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 102
+    prev: " of the spread of fire through external cladding systems.474"
+    next: "The Select Committee heard evidence on 20 July 1999 from a v"
+    verdict: join
+    stratum: disagreement
+    image: true
+    note: "7.44 ends a sentence at the foot of p.93; p.94 opens flush, unnumbered: the same paragraph (the HTML edition has no break there)"
+  - page: 106
+    prev: "would help to “clarify any remaining issues”.538"
+    next: "7.58 The word “issue” used in that way is notoriously imprec"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 107
+    prev: "analysis or precise expression. "
+    next: "7.61 Although he said that he could not remember having done"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 108
+    prev: "rimental phase of the project because it was of interest to "
+    next: "the industry566 and none of them appears to have realised th"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 120
+    prev: "December 2002.732"
+    next: "7.114 BS 8414-1 set out the test method for full-scale testi"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 142
+    prev: "ersion971 and it is apparent that there was little appetite "
+    next: "on his part or that of the department for revisiting the gui"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 143
+    prev: "out on all three.983"
+    next: "9.15 The panels performed poorly in those tests, most of whi"
+    verdict: split
+    stratum: random
+    image: true
+    note: ""
+  - page: 147
+    prev: "irements in relation to fire resistance (i.e. resistance to "
+    next: "the passage of heat and flame), as well as having surfaces c"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 158
+    prev: "the basis of them. He also accepted that the department had "
+    next: "missed the opportunity to look beyond the coroner’s recommen"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 168
+    prev: "tainty whether an exemption from the policy would have been "
+    next: "granted, if it had it been sought, but it is clear that the "
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 173
+    prev: "5.  Sprinkler provisions."
+    next: "6.  Space separation."
+    verdict: split
+    stratum: disagreement
+    image: true
+    note: "a numbered list inside 10.72 (items 1-5, then 6-7 on the next page): a new item"
+  - page: 202
+    prev: "sked Mr Martin whether he could answer some questions about "
+    next: "the meaning of paragraph 12.7 of Approved Document B that he"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 211
+    prev: "t consideration should be given to conducting a review into "
+    next: "how the responsible person under the Fire Safety Order can b"
+    verdict: join
+    stratum: random
+    image: true
+    note: ""
+  - page: 229
+    prev: "airman of the LGA, on 23 August 2011 saying that paragraphs "
+    next: "79.9 to 79.11 of the LGA Guide encouraged readers to ignore "
+    verdict: join
+    stratum: random
+    image: true
+    note: "14.8 runs on into a cross-reference to the LGA Guide's paragraphs (\"paragraphs\" / \"79.9 to 79.11\")"
