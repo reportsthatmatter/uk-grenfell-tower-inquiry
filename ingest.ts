@@ -23,9 +23,8 @@ import {
  * structure tree is not read: the PDF pipeline below reads the layout. Page
  * citations below are printed page numbers (printed 1 is PDF p.9).
  *
- * Needs @rtm/ingest with furnitureFaces() and typographicHeadings({ relevel })
- * (ingest branch grenfell-passes, stacked on pohorizon-passes, PR #63; not yet
- * released when this was written).
+ * Needs @rtm/ingest with furnitureFaces(), typographicHeadings({ relevel }), numberedOpenings() and
+ * figureFaces() (ingest PR #68, branch grenfell-passes; not yet released when this was written).
  */
 export default pipeline({
   id: "uk-grenfell-tower-inquiry",
