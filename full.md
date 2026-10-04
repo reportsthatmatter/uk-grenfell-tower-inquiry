@@ -1,5 +1,5 @@
 ---
-title: "Grenfell Tower Inquiry: Phase 2 Report"
+title: "Grenfell Tower Inquiry: Phase 2 Report, Volume 1"
 authors: "Sir Martin Moore-Bick (Chairman), Ali Akbor and Thouria Istephan"
 published_at: "4 September 2024"
 source_url: "https://assets.publishing.service.gov.uk/media/66d817aa701781e1b341dbd3/CCS0923434692-004_GTI_Phase_2_Volume_1_BOOKMARKED.pdf"
