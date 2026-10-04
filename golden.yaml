@@ -1,0 +1,97 @@
+# Golden pages: ground truth for this report, read off the PDF page image and checked by `pnpm ingest verify`.
+# Format and rules: @rtm/ingest src/golden.ts and the site's docs/quality-harness.md ("Golden pages").
+# A page marked xfail is a known pipeline defect: it stays red here, verify stays green, and the bead says why.
+# Printed page = PDF page - 8 (the front matter is folioed v-viii). Headings carry the pipeline's division form
+# ("Chapter 1: Introduction"), as the contents and the Inquiry's HTML edition print it; the banner sets it on two lines.
+pages:
+  # A chapter opening: the white banner ("Chapter 1" / "Introduction"), six numbered paragraphs, no notes.
+  - pdf: 11
+    printed: 3
+    verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image"
+    features: [H]
+    blocks:
+      - heading: "Chapter 1: Introduction"
+        level: 3
+      - paragraph: {start: "1.1 In his introduction to his", end: "the substance of our report."}
+      - paragraph: {start: "1.2 In Phase 1 the chairman", end: "had gone wrong and why."}
+      - paragraph: {start: "1.3 In Phase 2 we have", end: "together brought about that situation."}
+      - paragraph: {start: "1.4 Following the publication of the", end: "the conclusions in this report."}
+      - paragraph: {start: "1.5 In January 2020 Ms Mehra", end: "her place in October 2020."}
+      - paragraph: {start: "1.6 In June 2022 Mr Mark", end: "as Secretary in her place."}
+    footnotes: []
+    markers: []
+  # An ordinary body page: numbered paragraphs with a hanging indent, two page-foot notes set number-over-text, the last paragraph running on.
+  - pdf: 12
+    printed: 4
+    verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image"
+    features: [ordinary, F]
+    blocks:
+      - paragraph: {start: "1.7 The procedure adopted in this", end: "evidence to which it related."}
+      - paragraph: {start: "1.8 The Inquiry sat to hear", end: "anyone interested in doing so.", notes: [1]}
+      - paragraph: {start: "1.9 Between 9 December 2020 and", end: "and continued until November 2022."}
+      - paragraph: {start: "1.10 As before, all witness statements", end: "available through the Inquiry's website."}
+      - paragraph: {start: "1.11 In his introduction to the", end: "those potential criticisms were based.", notes: [2]}
+      - paragraph: {start: "1.12 Between July 2023 and May", end: "put forward during the hearings.", notes: [3]}
+    footnotes: [1, 2]
+    markers: [1, 2]
+  # The executive summary: its account of Part 3 headed in the 18pt blue face (under Chapter 2), then a 15pt sub-heading.
+  - pdf: 20
+    printed: 12
+    verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image"
+    features: [H, F]
+    blocks:
+      - heading: "Part 3: The testing and marketing of products (Chapters 15 – 29)"
+        level: 4
+      - paragraph: {start: "2.19 One very significant reason why", end: "was complicit in that strategy."}
+      - paragraph: {start: "2.20 Those strategies succeeded partly because", end: "standards of monitoring and supervision."}
+      - heading: "Arconic Architectural Products"
+        level: 5
+      - paragraph: {start: "2.21 Arconic Architectural Products manufactured and", end: "form, particularly on high-rise buildings.", notes: [4, 5]}
+      - paragraph: {start: "2.22 The product in its riveted", end: "the cassette and riveted forms."}
+      - paragraph: {start: "2.23 By late 2007 Arconic had", end: "for use on residential buildings."}
+      - paragraph: {start: "2.24 Despite the knowledge gained from", end: "any intention of doing so."}
+    footnotes: [4, 5]
+    markers: [4, 5]
+  # A chapter opening whose first sub-heading ("Introduction") opens many chapters, then a 15pt sub-heading.
+  - pdf: 45
+    printed: 37
+    verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image"
+    features: [H, F]
+    blocks:
+      - heading: "Chapter 4: The development of the regulatory regime"
+        level: 3
+      - heading: "Introduction"
+        level: 4
+      - paragraph: {start: "4.1 In Chapter 5 of the", end: "other important aspects, where relevant.", notes: [15]}
+      - paragraph: {start: "4.2 In producing our summary we", end: "the time of the refurbishment."}
+      - paragraph: {start: "4.3 In their reports Mr Todd", end: "referred to in the footnotes."}
+      - heading: "Terminology"
+        level: 5
+      - paragraph: {start: "4.4 Before we begin discussing the", end: "item test (BS EN 13823)."}
+    footnotes: [15]
+    markers: [15]
+  # A figure: Figure 5.1's labels, its caption, then 5.10. The pipeline sets the labels as paragraphs, draws figure words into 5.9's last line and a stray "39" into the caption.
+  - pdf: 58
+    printed: 50
+    verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image"
+    features: [A, F]
+    xfail: reportsthatmatter-7150
+    blocks:
+      - paragraph: {start: "Figure 5.1: Depiction of apparatus for", end: "apparatus for BS 476-6 test."}
+      - paragraph: {start: "5.10 The results of the test", end: "product is capable of releasing.", notes: [145, 146]}
+    footnotes: [141, 142, 143, 144, 145]
+    markers: [141, 142, 143, 144, 145]
+  # A 12pt blue sub-heading (the smallest level) among densely noted paragraphs.
+  - pdf: 120
+    printed: 112
+    verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image"
+    features: [H, F]
+    blocks:
+      - paragraph: {start: "7.114 BS 8414-1 set out the", end: "were contained in separate documents.", notes: [733, 734, 735]}
+      - heading: "BR 135, second edition: 2003"
+        level: 6
+      - paragraph: {start: "7.115 Dr Colwell and Mr Martin,", end: "taken from Fire Note 9.", notes: [736, 737, 738, 739]}
+      - paragraph: {start: "7.116 The second edition of BR", end: "unsubstantiated opinion in that way.", notes: [740, 741, 742, 743, 744]}
+      - paragraph: {start: "7.117 The first (1988) edition of", end: "to avoid upsetting the industry.", notes: [745, 746, 747]}
+    footnotes: [733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747]
+    markers: [733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747]

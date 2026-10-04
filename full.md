@@ -1217,7 +1217,7 @@ Figure 6.6: Chart showing changes in the external wall requirements as defined i
 
 7.24 There is no evidence that anyone in the department gave any consideration to introducing a recommendation that only non-combustible materials be used in the construction of external walls of high-rise buildings. Dr Connolly did not think that was necessary[^364] and neither he, nor it seems anyone else, thought that there was a need to take action as a matter of urgency.[^365] He considered that the results of the tests that BRE had carried out confirmed the need for a full-scale test to enable evaluation of a complete system[^366] and that BRE should develop such a test. He envisaged that Approved Document B would then be amended to require external wall systems used on high-rise buildings to pass that test.[^367]
 
-1996–1998: Fire Note 3
+##### 1996–1998: Fire Note 3
 
 7.25 In the years that followed, staff at BRE (including Dr Connolly[^368] and Dr Colwell[^369]) worked on the development of a large-scale test method for the fire performance of external cladding systems. That method was initially known as Fire Note 3, which was submitted to the department in 1996[^370] and published in 1998.[^371] It built on the work Dr Connolly had done in 1994[^372] and adopted the theoretical basis of his experimental research.[^373] Following various additional tests on various types of rainscreen cladding and insulated renders (no records of which have been provided to us)[^374] and discussions with the department and other interested bodies,[^375] three performance criteria were eventually selected against which the performance of a system was to be evaluated: mechanical performance, external fire spread and internal fire spread.[^376]
 
@@ -1269,7 +1269,7 @@ Figure 6.6: Chart showing changes in the external wall requirements as defined i
 
 7.42 The section of BRE's report to the department entitled "Implications for the Building Regulations" stated only that the matter had been thoroughly explored by a Select Committee.[^463] In fact, by August 2000, a Parliamentary Select Committee had recommended that the full-scale test and performance criteria developed by BRE that were subsequently adopted by the British Standards Institution as BS 8414 should be substituted in Approved Document B for the previous requirements relating to the fire safety of external cladding systems.[^464] However, as BRE was well aware by August 2000, that recommendation had not been implemented by the department.[^465]
 
-Fire Note 9
+##### Fire Note 9
 
 7.43 In 1999, BRE published Fire Note 9,[^466] a revised version of the test method that had been set out in Fire Note 3.[^467] Fire Note 9 was written by Dr Colwell and David Smit, who at the time was a laboratory technician and therefore junior to her.[^468] As Dr Colwell explained,[^469] Fire Note 9 contained no technical or substantive changes to the test method or assessment criteria set out in Fire Note 3. Similarly, the drafting of Fire Note 9 did not involve any reconsideration of the theoretical basis for the test method. The only revisions to Fire Note 3 were the inclusion of a definitions section,[^470] a sample graph (for showing the determination of test start time and temperature)[^471] and a maximum thickness for test samples to ensure that samples would fit on to the test facility.[^472]
 

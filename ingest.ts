@@ -63,7 +63,8 @@ export default pipeline({
     // "Introduction", p.3); then three blue (#314c88) bold sub-heading sizes: 18pt ("Introduction" p.37,
     // and the executive summary's "Part 3 / The testing and marketing of products (Chapters 15 – 29)",
     // p.12), 15pt ("Arconic Architectural Products" p.12, "The Holroyd report" p.42) and 12pt ("BR 135,
-    // second edition: 2003", p.112). (Layout keys read 1.5 times the point size.) `relevel`: the
+    // second edition: 2003", p.112), each also in bold italic where it names a publication ("Fire Note 9",
+    // p.93). (Layout keys read 1.5 times the point size.) `relevel`: the
     // executive summary's "Part 3" to "Part 14" headings were read by their text as divisions ("Part 3:
     // …", level 2) and stood as top-level sections beside the volume's own Parts 1 and 2; they take
     // their face's level, under Chapter 2.
@@ -73,9 +74,9 @@ export default pipeline({
       faces: [
         ["Calibri-Light|60|#ffffff", "Calibri|60|#ffffff|b"],
         ["Calibri|30|#ffffff|b"],
-        ["Calibri|27|#314c88|b"],
-        ["Calibri|23|#314c88|b"],
-        ["Calibri|18|#314c88|b"],
+        ["Calibri|27|#314c88|b", "Calibri|27|#314c88|b|i"],
+        ["Calibri|23|#314c88|b", "Calibri|23|#314c88|b|i"],
+        ["Calibri|18|#314c88|b", "Calibri|18|#314c88|b|i"],
       ],
     }),
   ],
