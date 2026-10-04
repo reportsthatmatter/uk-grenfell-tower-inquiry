@@ -1,6 +1,6 @@
 # Fidelity review — Grenfell Tower Inquiry: Phase 2 Report, Volume 1
 
-Pages: 230  ·  Footnotes: 2019  ·  Auto-fixes applied: 516  ·  Human corrections: 0
+Pages: 230  ·  Footnotes: 2019  ·  Auto-fixes applied: 516  ·  Human corrections: 1
 
 **65 open**, 0 reviewed and judged correct.
 

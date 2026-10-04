@@ -52,6 +52,19 @@ pages:
       - paragraph: {start: "2.24 Despite the knowledge gained from", end: "any intention of doing so."}
     footnotes: [4, 5]
     markers: [4, 5]
+  # A numbered paragraph after "…Approved Document B." (reportsthatmatter-f951): 2.86 ran on inside 2.85, and its p.23 tail ("Reynobond 55 PE.") stood apart. The page opens on the end of 2.81, joined to p.21.
+  - pdf: 30
+    printed: 22
+    verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image and the Inquiry's HTML edition"
+    features: [B]
+    blocks:
+      - paragraph: {start: "2.82 We consider that the principal", end: "co-ordinate the design work properly.", notes: [11]}
+      - paragraph: {start: "2.83 Rydon had an inexperienced team", end: "strategy had not been completed."}
+      - paragraph: {start: "2.84 Harley itself failed in many", end: "understand the underlying testing regime.", notes: [12]}
+      - paragraph: {start: "2.85 Although Celotex RS5000 (as opposed", end: "guidance in Approved Document B."}
+      - paragraph: {start: "2.86 RBKC's building control department failed", end: "support the use of RS5000.", notes: [13]}
+    footnotes: [11, 12, 13]
+    markers: [11, 12, 13]
   # A chapter opening whose first sub-heading ("Introduction") opens many chapters, then a 15pt sub-heading.
   - pdf: 45
     printed: 37
@@ -70,12 +83,11 @@ pages:
       - paragraph: {start: "4.4 Before we begin discussing the", end: "item test (BS EN 13823)."}
     footnotes: [15]
     markers: [15]
-  # A figure: Figure 5.1's labels, its caption, then 5.10. The pipeline sets the labels as paragraphs, draws figure words into 5.9's last line and a stray "39" into the caption.
+  # A figure: its caption, then 5.10. Before figureFaces (7150) the labels stood as paragraphs, figure words were drawn into 5.9's last line and a stray "39" into the caption.
   - pdf: 58
     printed: 50
     verified_by: "Claude (Opus 5.5), 2026-10-04, against the page image"
     features: [A, F]
-    xfail: reportsthatmatter-7150
     blocks:
       - paragraph: {start: "Figure 5.1: Depiction of apparatus for", end: "apparatus for BS 476-6 test."}
       - paragraph: {start: "5.10 The results of the test", end: "product is capable of releasing.", notes: [145, 146]}

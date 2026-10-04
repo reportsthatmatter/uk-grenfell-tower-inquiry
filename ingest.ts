@@ -3,9 +3,12 @@ import {
   layoutPageJoins,
   quoteListRunOns,
   furnitureFaces,
+  figureFaces,
+  geometry,
   romanFolios,
   layoutMarkers,
   numberedParagraphs,
+  numberedOpenings,
   hangingIndents,
   typographicHeadings,
 } from "@rtm/ingest";
@@ -48,6 +51,18 @@ export default pipeline({
     // ("Introduction" under the banners of chs 4-8 and 10, "Part 3" in the executive summary, p.12) and
     // the banners' "Chapter 2" lines. Dropped by face instead, and nothing else.
     furnitureFaces(["Calibri|15|#ffffff"]),
+    // The body's left edge is read per page. The volume-wide margin is the column the paragraph numbers
+    // sit in (10), so on a page that opens mid-paragraph, with no number on it, every line of the hanging
+    // text (12) read as a new paragraph and only the lower-case ones were joined back: "…the BBA
+    // certificate for" / "Reynobond 55 PE." (2.86, p.22-23), the end of 9.40 (p.141) and of 6.21 (p.73)
+    // stood as paragraphs of their own (the Inquiry's HTML edition has each as one paragraph).
+    geometry("per-page"),
+    // The figures and charts of chapters 5 and 6 (printed pp.50-79) draw their words in Times New Roman,
+    // which nothing else in the volume uses: Figure 5.1's labels ("Chimney", "Combustion chamber",
+    // p.50) stood as paragraphs, "BS 476-6" drawn over 5.9's last line was glued into it, and the
+    // charts of pp.73-79 came out as runs of interleaved words (reportsthatmatter-7150). The captions
+    // ("Figure 5.1: …", Calibri bold grey) stay.
+    figureFaces(["TimesNewRomanPSMT", "TimesNewRomanPS"]),
     // The front matter is folioed v to viii (the contents, PDF pp.5-8); without this its pages were
     // marked 1, 2, "2#2".
     romanFolios(),
@@ -57,6 +72,10 @@ export default pipeline({
     layoutMarkers(),
     // "1.10" paragraphs, the number at the margin and the text hanging one tab in (p.4).
     numberedParagraphs(),
+    // A numbered paragraph after one ending "…Approved Document B." stays apart: the text rule that reads a
+    // closing initial as an unfinished sentence ran 2.86 on inside 2.85 (p.22), 5.9 inside 5.8 (p.49) and
+    // 9.42 inside 9.41 (p.142), so their ids did not exist (reportsthatmatter-f951).
+    numberedOpenings(),
     hangingIndents(),
     // Headings are set only by face. Levels: the Part title pages (Calibri 40pt white, "Part 1" light
     // and "Introduction" bold, p.1); the chapter banners (Calibri 20pt bold white, "Chapter 1" /
