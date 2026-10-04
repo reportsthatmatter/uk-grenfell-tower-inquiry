@@ -16,7 +16,13 @@ import {
  * fix to a shared pass reaches every report that calls it.
  *
  * The source is the Inquiry's born-digital, tagged InDesign PDF of Phase 2
- * Volume 1 (232 A4 pages, single column), as published on GOV.UK.
+ * Volume 1 (232 A4 pages, single column), as published on GOV.UK. Its
+ * structure tree is not read: the PDF pipeline below reads the layout. Page
+ * citations below are printed page numbers (printed 1 is PDF p.9).
+ *
+ * Needs @rtm/ingest with furnitureFaces() and typographicHeadings({ relevel })
+ * (ingest branch grenfell-passes, stacked on pohorizon-passes, PR #63; not yet
+ * released when this was written).
  */
 export default pipeline({
   id: "uk-grenfell-tower-inquiry",
@@ -30,13 +36,37 @@ export default pipeline({
     { path: "archive/grenfell-tower-inquiry-phase2-vol1-hc19-i.pdf", sha256: "51d7e2c9592f79b9522bce99c9294badb9479a3b214ad5ce7506d8dd0e45d3fe" },
   ],
   passes: [
+    // A paragraph run over a page break joins when the layout says it runs on: 1.12 runs from
+    // printed p.4 ("the amount of material that a") to p.5 ("recipient had to consider").
     layoutPageJoins(),
+    // A quotation running over a page arrives as two (the Approved Document B extracts, ch.6).
     quoteListRunOns(),
+    // The running heads are set in white Calibri 10pt on a banner: "The Grenfell Tower Inquiry: Phase 2
+    // Report" on versos (p.4), "Part 1 | Chapter 1: Introduction" on rectos (p.5). The recto head names
+    // the chapter, so it recurs only on that chapter's few rectos and `runningFurniture` left the short
+    // chapters' heads in the text (chs 1, 13, 14), while it stripped real headings that open many pages
+    // ("Introduction" under the banners of chs 4-8 and 10, "Part 3" in the executive summary, p.12) and
+    // the banners' "Chapter 2" lines. Dropped by face instead, and nothing else.
     furnitureFaces(["Calibri|15|#ffffff"]),
+    // The front matter is folioed v to viii (the contents, PDF pp.5-8); without this its pages were
+    // marked 1, 2, "2#2".
     romanFolios(),
+    // 2,019 notes at the page feet, numbered once through the volume, the number on its own line and the
+    // text beneath ("1" / "The Attorney-General's Undertaking is at…", p.4): the default (bare) style.
+    // Markers are raised digits after a word or a closing quotation mark ("proceedings.1", p.4).
     layoutMarkers(),
+    // "1.10" paragraphs, the number at the margin and the text hanging one tab in (p.4).
     numberedParagraphs(),
     hangingIndents(),
+    // Headings are set only by face. Levels: the Part title pages (Calibri 40pt white, "Part 1" light
+    // and "Introduction" bold, p.1); the chapter banners (Calibri 20pt bold white, "Chapter 1" /
+    // "Introduction", p.3); then three blue (#314c88) bold sub-heading sizes: 18pt ("Introduction" p.37,
+    // and the executive summary's "Part 3 / The testing and marketing of products (Chapters 15 – 29)",
+    // p.12), 15pt ("Arconic Architectural Products" p.12, "The Holroyd report" p.42) and 12pt ("BR 135,
+    // second edition: 2003", p.112). (Layout keys read 1.5 times the point size.) `relevel`: the
+    // executive summary's "Part 3" to "Part 14" headings were read by their text as divisions ("Part 3:
+    // …", level 2) and stood as top-level sections beside the volume's own Parts 1 and 2; they take
+    // their face's level, under Chapter 2.
     typographicHeadings({
       firstLevel: 2,
       relevel: true,
