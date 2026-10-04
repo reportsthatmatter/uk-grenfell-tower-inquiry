@@ -1,0 +1,43 @@
+{
+  "name": "uk-grenfell-tower-inquiry",
+  "title": "Grenfell Tower Inquiry: Phase 2 Report",
+  "resources": [
+    {
+      "title": "Grenfell Tower Inquiry: Phase 2 Report, Volume 1 (Part 1 Introduction; Part 2 The path to disaster), HC 19-I, ISBN 978-1-5286-5080-9, as published on GOV.UK 4 September 2024",
+      "path": "archive/grenfell-tower-inquiry-phase2-vol1-hc19-i.pdf",
+      "format": "pdf",
+      "mediatype": "application/pdf",
+      "bytes": 7151071,
+      "hash": "sha256:51d7e2c9592f79b9522bce99c9294badb9479a3b214ad5ce7506d8dd0e45d3fe",
+      "sources": [
+        {
+          "title": "Grenfell Tower Inquiry Report: Phase 2 report (Volume 1)",
+          "web": "https://assets.publishing.service.gov.uk/media/66d817aa701781e1b341dbd3/CCS0923434692-004_GTI_Phase_2_Volume_1_BOOKMARKED.pdf"
+        },
+        {
+          "title": "Landing page: Publication of the Grenfell Tower Inquiry phase 2 report (GOV.UK)",
+          "web": "https://www.gov.uk/government/publications/publication-of-the-grenfell-tower-inquiry-phase-2-report"
+        }
+      ]
+    },
+    {
+      "title": "The Inquiry's HTML edition of Volume 1 (Wayback capture of 2 October 2024), a reference for words, headings and notes",
+      "path": "reference/raw/volume-1.html",
+      "format": "html",
+      "mediatype": "text/html",
+      "sources": [
+        {
+          "title": "grenfelltowerinquiry.org.uk/report/phase-2/volume-1.html (Wayback)",
+          "web": "https://web.archive.org/web/20241002041635/https://www.grenfelltowerinquiry.org.uk/report/phase-2/volume-1.html"
+        }
+      ]
+    }
+  ],
+  "licenses": [
+    {
+      "name": "OGL-UK-3.0",
+      "title": "Open Government Licence v3.0",
+      "path": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+    }
+  ]
+}
