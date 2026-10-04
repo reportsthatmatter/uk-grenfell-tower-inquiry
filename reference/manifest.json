@@ -1,0 +1,41 @@
+{
+  "report": "uk-grenfell-tower-inquiry",
+  "set": "held-out",
+  "edition": "Phase 2 Volume 1's PDF's own structure tree (tagged PDF, InDesign styles: Chapter_Title, AHead/BHead/CHead, LI/Lbl, Note/Footnote_Text, role-mapped)",
+  "licence": "Crown copyright, reused under the Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).",
+  "fetched": "2026-10-04",
+  "sources": [
+    {
+      "path": "archive/grenfell-tower-inquiry-phase2-vol1-hc19-i.pdf",
+      "sha256": "51d7e2c9592f79b9522bce99c9294badb9479a3b214ad5ce7506d8dd0e45d3fe",
+      "bytes": 7151071
+    },
+    {
+      "path": "reference/raw/volume-1.html",
+      "url": "https://web.archive.org/web/20241002041635id_/https://www.grenfelltowerinquiry.org.uk/report/phase-2/volume-1.html",
+      "sha256": "b3cd820977bf93f6fa9ce2916b837bc3d2eef0245ddeda5c6400d4f627fc8efd",
+      "bytes": 943267
+    }
+  ],
+  "sources_note": "The reference is derived from the source PDF already in archive/, so no copy of the PDF is kept under reference/raw/.",
+  "blocks": {
+    "path": "reference/blocks.jsonl",
+    "sha256": "31bf16dd10de99653f076a44263456cf5657c92603155ee74c84807a51e43bdb",
+    "normaliser": "reportsthatmatter scripts/score/reference.py, adapter tagged, version 2",
+    "built": "2026-10-04",
+    "counts": {
+      "contents": 138,
+      "heading": 229,
+      "note": 2019,
+      "paragraph": 859,
+      "quote": 30
+    },
+    "markers": 998,
+    "markers_linked": 998,
+    "words": 105457
+  },
+  "caveats": [
+    "A new publisher family (the Grenfell Tower Inquiry), so held out: score it, do not tune passes on it.",
+    "The Inquiry's own HTML edition of the volume (reference/raw/volume-1.html, Wayback; the live site is behind a captcha at the National Archives) is cached as a second reference: it has every word, h1-h5 headings and all 2019 notes linked, but no paragraph numbers and no page anchors, so it is not the adapter here; an HTML adapter (or a hybrid) is gqsy.4 follow-up work."
+  ]
+}
