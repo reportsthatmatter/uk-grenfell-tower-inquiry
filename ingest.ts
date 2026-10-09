@@ -40,7 +40,10 @@ export default pipeline({
   passes: [
     // A paragraph run over a page break joins when the layout says it runs on: 1.12 runs from
     // printed p.4 ("the amount of material that a") to p.5 ("recipient had to consider").
-    layoutPageJoins(),
+    // numberedBody: every body paragraph is numbered, so an unnumbered page opening carries on the one above:
+    // 7.44 "…from the department." / "The Select Committee heard evidence…" (printed p.94), and 5.23's inline
+    // "(i) …," / "(ii) a composite product…" (p.55) is the sentence's own list (reportsthatmatter-ni9o).
+    layoutPageJoins({ numberedBody: true }),
     // A quotation running over a page arrives as two (the Approved Document B extracts, ch.6).
     quoteListRunOns(),
     // The running heads are set in white Calibri 10pt on a banner: "The Grenfell Tower Inquiry: Phase 2
