@@ -43,6 +43,10 @@ Versions: no correction or erratum notice found for Volume 1. Volume 7's HTML ca
 
 Layout notes: chapter titles in white on a banner ("Chapter 1" / "Introduction", 20pt bold); sub-headings in blue bold at 18, 15 and 12pt; running heads in white 10pt on a banner ("The Grenfell Tower Inquiry: Phase 2 Report" on versos, "Part 1 | Chapter 1: Introduction" on rectos); numbered paragraphs with the number at the margin; notes at the foot with the number on its own line and the text beneath; tables and figures in Chapters 5 and 6.
 
+## Licence
+
+Text of the report: Crown copyright 2024, Open Government Licence v3.0. Our markup, processing and editorial additions: CC BY 4.0. Code: MIT. Evidence, caveats and the full statement are in [LICENSE](LICENSE); the MIT text is in [LICENSE-MIT](LICENSE-MIT).
+
 ## Build
 
 `ingest.ts` declares how the report is turned into Markdown. Rebuild from the site repo with `pnpm ingest run uk-grenfell-tower-inquiry`. `fidelity.md` lists the words the pipeline flagged for review. It needs `@rtm/ingest` with `furnitureFaces`, `typographicHeadings({ faces, relevel })` (ingest branch `grenfell-passes`, on `pohorizon-passes`; not yet released).
