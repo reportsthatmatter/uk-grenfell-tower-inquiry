@@ -107,3 +107,48 @@ pages:
       - paragraph: {start: "7.117 The first (1988) edition of", end: "to avoid upsetting the industry.", notes: [745, 746, 747]}
     footnotes: [733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747]
     markers: [733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747]
+  # Volume 2 (gqsy.4.2): a page that opens mid-paragraph, inside 22.102; its capital-initial lines ("K15 was rated…",
+  # "B) the amended version…") each opened a paragraph. And "12.7 of Approved Document B" at a line's head stays in 22.105.
+  - pdf: 94
+    volume: 2
+    printed: 94
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    features: [B]
+    xfail: reportsthatmatter-aiuc
+    opens_with: "substrates and omitted the previous"
+    continues_previous: true
+    must_contain: ["statement that K15 was rated national Class 0", "Approved Document B) the amended version", "paragraph 12.7 of Approved Document B was dangerously misleading"]
+    blocks:
+      - paragraph: {start: "22.103 That proposed draft of the", end: "be re-issued rather than amended.", notes: [807, 808, 809]}
+      - paragraph: {start: "22.104 Discussions resumed in January 2013", end: "135 had not been successful.", notes: [810, 811, 812, 813, 814]}
+      - paragraph: {start: "22.105 Despite the BBA's evidence and", continues: true, notes: [815, 816, 817, 818, 819]}
+    footnotes: [804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819]
+    markers: [804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819]
+  # Volume 6 (gqsy.4.2): Part 9's first chapter opens on a page with one note, "1", where the notes restart for the
+  # volume (footnoteResets); 84.5 runs on to p.8, where note 2 is.
+  - pdf: 7
+    volume: 6
+    printed: 7
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    features: [H, F]
+    blocks:
+      - heading: "Chapter 84: Introduction to Part 9"
+        level: 3
+      - paragraph: {start: "84.1 In the preceding chapters we", end: "our purpose in doing so."}
+      - paragraph: {start: "84.2 Grenfell Tower is in an", end: "experience on 14 June 2017."}
+      - paragraph: {start: "84.3 An inquest, whether conducted by", end: "by his or her death."}
+      - paragraph: {start: "84.4 At an early stage of", end: "the stress of prolonged proceedings.", notes: [1]}
+      - paragraph: {start: "84.5 Subsequently, the chairman issued a", continues: true}
+    footnotes: [1]
+    markers: [1]
+  # Volume 7 (gqsy.4.2): the Part 10 title page, which prints no folio; it is p.5 by its place in the sequence.
+  - pdf: 5
+    volume: 7
+    printed: 5
+    verified_by: "Claude (Opus 5.5), 2026-11-12, against the page image"
+    features: [H]
+    blocks:
+      - heading: "Part 10: Response and recovery"
+        level: 2
+    footnotes: []
+    markers: []
